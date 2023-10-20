@@ -1,0 +1,26 @@
+meta {
+  name: Create a new certificate
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/certificates
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "name": "web-cert-01",
+    "type": "custom",
+    "private_key": "(</path/to/privkey1.pem)",
+    "leaf_certificate": "(</path/to/cert1.pem)",
+    "certificate_chain": "(</path/to/fullchain1.pem)"
+  }
+}

@@ -1,0 +1,16 @@
+meta {
+  name: List all Sizes
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/sizes
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

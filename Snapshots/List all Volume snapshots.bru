@@ -1,0 +1,22 @@
+meta {
+  name: List all Volume snapshots
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/snapshots?page={{page}}&per_page={{per_page}}&resource_type=volume
+  body: none
+  auth: none
+}
+
+query {
+  page: {{page}}
+  per_page: {{per_page}}
+  resource_type: volume
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

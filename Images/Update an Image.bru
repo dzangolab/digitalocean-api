@@ -1,0 +1,22 @@
+meta {
+  name: Update an Image
+  type: http
+  seq: 8
+}
+
+put {
+  url: {{base_url}}/images/{{image_id}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "name": "{{new_image_name}}"
+  }
+}

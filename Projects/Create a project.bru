@@ -1,0 +1,25 @@
+meta {
+  name: Create a project
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/projects
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "name": "do-postman-web-api-dev",
+    "description": "DO Postman API",
+    "purpose": "Service or API",
+    "environment": "Development"
+  }
+}

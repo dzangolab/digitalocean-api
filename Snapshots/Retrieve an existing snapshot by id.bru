@@ -1,0 +1,16 @@
+meta {
+  name: Retrieve an existing snapshot by id
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/snapshots/{{snapshot_id}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

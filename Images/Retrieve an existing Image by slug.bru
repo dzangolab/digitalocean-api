@@ -1,0 +1,16 @@
+meta {
+  name: Retrieve an existing Image by slug
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/images/{{image_slug}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

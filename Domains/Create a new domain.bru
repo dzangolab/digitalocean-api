@@ -1,0 +1,23 @@
+meta {
+  name: Create a new domain
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/domains
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "name": "{{domain_name}}",
+    "ip_address": "1.2.3.4"
+  }
+}

@@ -1,0 +1,22 @@
+meta {
+  name: Create a Floating IP reserved to a Region
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/floating_ips
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "region": "lon1"
+  }
+}

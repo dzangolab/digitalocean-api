@@ -1,0 +1,21 @@
+meta {
+  name: List all actions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/actions?page={{page}}&per_page={{per_page}}
+  body: none
+  auth: none
+}
+
+query {
+  page: {{page}}
+  per_page: {{per_page}}
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

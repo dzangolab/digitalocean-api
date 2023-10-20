@@ -1,0 +1,16 @@
+meta {
+  name: List all Keys
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/account/keys
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

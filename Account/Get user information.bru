@@ -1,0 +1,16 @@
+meta {
+  name: Get user information
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/account
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

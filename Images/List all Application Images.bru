@@ -1,0 +1,22 @@
+meta {
+  name: List all Application Images
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/images?page={{page}}&per_page={{per_page}}&type={{type_application}}
+  body: none
+  auth: none
+}
+
+query {
+  page: {{page}}
+  per_page: {{per_page}}
+  type: {{type_application}}
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

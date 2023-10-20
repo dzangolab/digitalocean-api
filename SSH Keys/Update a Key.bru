@@ -1,0 +1,22 @@
+meta {
+  name: Update a Key
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/account/keys/{{ssh_key_id}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "name": "Renamed SSH Key"
+  }
+}

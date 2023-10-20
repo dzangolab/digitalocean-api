@@ -1,0 +1,20 @@
+meta {
+  name: Patch the Default Project
+  type: http
+  seq: 8
+}
+
+patch {
+  url: {{base_url}}/projects/default
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {"environment": "Production"}
+}

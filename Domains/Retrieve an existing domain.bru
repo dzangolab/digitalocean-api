@@ -1,0 +1,16 @@
+meta {
+  name: Retrieve an existing domain
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/domains/{{domain_name}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

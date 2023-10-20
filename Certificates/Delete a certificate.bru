@@ -1,0 +1,16 @@
+meta {
+  name: Delete a certificate
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url}}/certificates/{{certificate_id}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

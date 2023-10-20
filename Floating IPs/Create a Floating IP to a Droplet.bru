@@ -1,0 +1,22 @@
+meta {
+  name: Create a Floating IP to a Droplet
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/floating_ips
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "droplet_id": "{{droplet_id}}"
+  }
+}

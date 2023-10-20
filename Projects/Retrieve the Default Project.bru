@@ -1,0 +1,16 @@
+meta {
+  name: Retrieve the Default Project
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/projects/default
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

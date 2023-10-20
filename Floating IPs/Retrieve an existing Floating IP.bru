@@ -1,0 +1,16 @@
+meta {
+  name: Retrieve an existing Floating IP
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/floating_ips/{{floating_ip}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

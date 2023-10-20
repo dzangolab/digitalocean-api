@@ -1,0 +1,16 @@
+meta {
+  name: Delete a domain
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{base_url}}/domains/{{domain_name}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

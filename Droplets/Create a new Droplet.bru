@@ -1,0 +1,34 @@
+meta {
+  name: Create a new Droplet
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/droplets
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "name": "{{name}}",
+    "region": "{{region}}",
+    "size": "{{size}}",
+    "image": "{{image}}",
+    "ssh_keys": null,
+    "backups": false,
+    "ipv6": true,
+    "user_data": null,
+    "private_networking": null,
+    "volumes": null,
+    "tags": [
+      "web"
+    ]
+  }
+}

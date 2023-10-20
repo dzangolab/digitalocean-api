@@ -1,0 +1,16 @@
+meta {
+  name: Delete a Floating IPs
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/floating_ips/{{floating_ip}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

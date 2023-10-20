@@ -1,0 +1,20 @@
+meta {
+  name: Listing Droplets by Tag
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/droplets?tag_name={{tag_name}}
+  body: none
+  auth: none
+}
+
+query {
+  tag_name: {{tag_name}}
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

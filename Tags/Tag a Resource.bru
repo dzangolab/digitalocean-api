@@ -1,0 +1,27 @@
+meta {
+  name: Tag a Resource
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/tags/{{tag_name}}/resources
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "resources": [
+      {
+        "resource_id": "{{resource_id}}",
+        "resource_type": "droplet"
+      }
+    ]
+  }
+}

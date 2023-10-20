@@ -1,0 +1,26 @@
+meta {
+  name: Update the Default Project
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{base_url}}/projects/default
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
+
+body:json {
+  {
+    "name": "patch-do-postman-web-api-stage",
+    "description": "DO Postman API Staging Default",
+    "purpose": "Service or API Default",
+    "environment": "Staging",
+    "is_default": true
+  }
+}

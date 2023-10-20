@@ -1,0 +1,16 @@
+meta {
+  name: Delete a snapshot
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{base_url}}/snapshots//{{snapshot_id}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}

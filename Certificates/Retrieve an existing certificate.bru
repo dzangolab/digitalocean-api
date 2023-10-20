@@ -1,0 +1,16 @@
+meta {
+  name: Retrieve an existing certificate
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/certificates/{{certificate_id}}
+  body: none
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{bearer_token}}
+}
